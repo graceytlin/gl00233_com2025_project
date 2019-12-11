@@ -30,8 +30,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  app_title: "A Day's Work"
-  app_desc: "A work shift timelog test site"
+  app_title: A Day's Work
+  app_desc: A work shift timelog test site
 
   home:
     home:
