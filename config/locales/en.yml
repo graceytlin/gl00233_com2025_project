@@ -32,3 +32,8 @@
 en:
   app_title: "A Day's Work"
   app_desc: "A work shift timelog test site"
+
+  home:
+    home:
+      title: A Day's Work
+      desc: Hello, good sire
