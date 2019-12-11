@@ -20,5 +20,20 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     assert_select 'h1', 'Contact Us!'
     assert_select 'p', 'Let us know what\'s on your mind.'
   end
+
+  test "should post request contact but no email" do
+    post request_contact_url
+
+    assert_response :redirect
+    assert_not_empty flash[:alert]
+    assert_nil flash[:notice]
+  end
+
+  test "should post request contact" do
+    post request_contact_url, params: {name: "Grace",email: "grace@fakemail.com",telephone: "07854416777", message: "This is a test!"}
+    assert_response :redirect
+      assert_nil flash[:alert]
+      assert_not_empty flash[:notice]
+  end
   
 end

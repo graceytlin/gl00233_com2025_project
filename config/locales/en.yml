@@ -55,3 +55,7 @@ en:
       enter_message: Tell us what's up
 
       submit: Send
+
+      request_contact:
+        no_email: Please enter an e-mail, otherwise, how will we reply?
+        email_sent: Thank you. We'll get back to you ASAP.
