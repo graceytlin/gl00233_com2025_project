@@ -37,3 +37,21 @@ en:
     home:
       title: A Day's Work
       desc: Hello, good sire
+
+    contact:
+      title: Contact Us!
+      contact_us: Let us know what's on your mind.
+
+      name: "Name:"
+      enter_name: What's your name?
+
+      email: "E-mail:"
+      enter_email: E-mail address
+
+      telephone: "Contact number:"
+      enter_telephone: Contact number
+
+      message: "Message:"
+      enter_message: Tell us what's up
+
+      submit: Send
