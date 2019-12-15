@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_14_213744) do
+ActiveRecord::Schema.define(version: 2019_12_15_190728) do
 
   create_table "shifts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.date "date", null: false
-    t.time "start", null: false
-    t.time "end", null: false
+    t.date "date"
+    t.time "start"
+    t.time "end"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

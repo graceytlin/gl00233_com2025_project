@@ -14,6 +14,7 @@ class ShiftsTest < ApplicationSystemTestCase
     visit shifts_url
     click_on "New Shift"
 
+    fill_in "Date", with: @shift.date
     fill_in "End", with: @shift.end
     fill_in "Start", with: @shift.start
     click_on "Create Shift"
@@ -26,6 +27,7 @@ class ShiftsTest < ApplicationSystemTestCase
     visit shifts_url
     click_on "Edit", match: :first
 
+    fill_in "Date", with: @shift.date
     fill_in "End", with: @shift.end
     fill_in "Start", with: @shift.start
     click_on "Update Shift"

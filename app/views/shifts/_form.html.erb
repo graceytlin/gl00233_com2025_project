@@ -12,13 +12,18 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
     <%= form.label :start %>
-    <%= form.datetime_select :start %>
+    <%= form.time_select :start %>
   </div>
 
   <div class="field">
     <%= form.label :end %>
-    <%= form.datetime_select :end %>
+    <%= form.time_select :end %>
   </div>
 
   <div class="actions">

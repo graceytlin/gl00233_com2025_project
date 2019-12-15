@@ -69,6 +69,6 @@ class ShiftsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shift_params
-      params.require(:shift).permit(:start, :end)
+      params.require(:shift).permit(:date, :start, :end)
     end
 end
