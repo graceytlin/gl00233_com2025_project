@@ -17,7 +17,7 @@ class ShiftsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create shift" do
     assert_difference('Shift.count') do
-      post shifts_url, params: { shift: { date: @shift.date, end: @shift.end, start: @shift.start } }
+      post shifts_url, params: { shift: { date: @shift.date, end_time: @shift.end_time, start_time: @shift.start_time + 1.minutes } }
     end
 
     assert_redirected_to shift_url(Shift.last)
@@ -34,7 +34,7 @@ class ShiftsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update shift" do
-    patch shift_url(@shift), params: { shift: { date: @shift.date, end: @shift.end, start: @shift.start } }
+    patch shift_url(@shift), params: { shift: { date: @shift.date, end_time: @shift.end_time, start_time: @shift.start_time + 1.minutes } }
     assert_redirected_to shift_url(@shift)
   end
 

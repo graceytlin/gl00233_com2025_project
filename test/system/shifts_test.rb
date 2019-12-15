@@ -15,8 +15,8 @@ class ShiftsTest < ApplicationSystemTestCase
     click_on "New Shift"
 
     fill_in "Date", with: @shift.date
-    fill_in "End", with: @shift.end
-    fill_in "Start", with: @shift.start
+    fill_in "End", with: @shift.end_time
+    fill_in "Start", with: @shift.start_time + 1.minutes
     click_on "Create Shift"
 
     assert_text "Shift was successfully created"
@@ -28,8 +28,8 @@ class ShiftsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Date", with: @shift.date
-    fill_in "End", with: @shift.end
-    fill_in "Start", with: @shift.start
+    fill_in "End", with: @shift.end_time
+    fill_in "Start", with: @shift.start_time + 1.minutes
     click_on "Update Shift"
 
     assert_text "Shift was successfully updated"
