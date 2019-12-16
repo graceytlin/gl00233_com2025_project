@@ -9,3 +9,9 @@ My other tests, however, seemed to pass fine.
 
 I tried to implement aspects, like having a superuser, that wasn't covered in lectures/labs properly
 but ultimately I struggled to get it to work and back tracked to start over a few times.
+
+My validations of shift (the time of ending must be after the shift start time) and timesheet can be found
+in the controller and the testing for shift is in shift_test.rb
+
+Thank you.
+Grace
