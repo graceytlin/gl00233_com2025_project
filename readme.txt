@@ -13,5 +13,9 @@ but ultimately I struggled to get it to work and back tracked to start over a fe
 My validations of shift (the time of ending must be after the shift start time) and timesheet can be found
 in the controller and the testing for shift is in shift_test.rb
 
+I also used mysql instead of sqlite3 but hopefully that won't cause any issues.
+
+https://github.com/graceytlin/gl00233_com2025_project
+
 Thank you.
 Grace
