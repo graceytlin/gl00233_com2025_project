@@ -19,5 +19,5 @@ class Timesheet < ApplicationRecord
         end
     end
 
-    scope :employee_timesheets, -> (employee) { where(['employee_id = ?', employee_id])}
+    scope :employee_timesheets, ->(employee) { where(['employee_id = ?', employee.id])}
 end

@@ -6,7 +6,7 @@ class TimesheetsController < ApplicationController
   # GET /timesheets
   # GET /timesheets.json
   def index
-    @timesheets = Timesheet.Timesheet.employee_timesheets(current_employee)
+    @timesheets = Timesheet.employee_timesheets(current_employee)
   end
 
   # GET /timesheets/1
@@ -27,7 +27,7 @@ class TimesheetsController < ApplicationController
   # POST /timesheets.json
   def create
     @timesheet = Timesheet.new(timesheet_params)
-    @note.employee = current_employee
+    @timesheet.employee = current_employee
 
     respond_to do |format|
       if @timesheet.save

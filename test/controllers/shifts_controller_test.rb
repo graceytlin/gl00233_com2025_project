@@ -1,9 +1,15 @@
 require 'test_helper'
 
 class ShiftsControllerTest < ActionDispatch::IntegrationTest
+
+  include Devise::Test::ControllerHelpers
+  include Devise::Test::IntegrationHelpers
+  
   setup do
     @shift = shifts(:one)
     @timesheet = timesheets(:one)
+    @employee = employees(:one)
+    sign_in @employee
   end
 
   test "should get index" do
