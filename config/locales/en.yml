@@ -33,6 +33,14 @@ en:
   app_title: A Day's Work
   app_desc: A work shift timelog test site
 
+  header: Home
+  contact: Contact Us
+
+  profile: My Portal
+  logout: Log out
+  login: Log-in
+  sign_up: Register
+
   home:
     home:
       title: A Day's Work
