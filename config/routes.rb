@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :timesheets
   devise_for :employees
 
-  resources :shifts
   
   root 'home#home'
 
