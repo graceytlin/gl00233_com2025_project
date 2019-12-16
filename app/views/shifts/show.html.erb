@@ -1,36 +1,39 @@
 <p>
-  <strong>Timesheet:</strong>
-  <%= @shift.timesheet %>
+  <strong><%= t('.belongs_to') %></strong>
+  <%= @shift.timesheet.date_from %> to <%= @shift.timesheet.date_to %>
 </p>
 
 <p>
-  <strong>Date:</strong>
+  <strong><%= t('.date') %></strong>
   <%= @shift.date %>
 </p>
 
 <p>
-  <strong>Start time:</strong>
+  <strong><%= t('.start_time') %></strong>
   <%= @shift.start_time %>
 </p>
 
 <p>
-  <strong>End time:</strong>
+  <strong><%= t('.end_time') %></strong>
   <%= @shift.end_time %>
 </p>
 
 <p>
-  <strong>Paid:</strong>
+  <strong><%= t('.paid') %></strong>
   <%= @shift.paid %>
 </p>
 
 <p>
-  <strong>Clock in:</strong>
-  <%= @shift.clock_in %>
-</p>
+  <% if @shift.clock_in? %>
 
-<p>
-  <strong>Clock out:</strong>
-  <%= @shift.clock_out %>
+    <strong><%= t('.clock_in') %></strong>
+        <%= @shift.clock_in %>
+    <strong><%= t('.clock_out') %></strong>
+        <%= @shift.clock_out %>
+
+  <% else %>
+    <%= t('.no_clock')%>
+  <% end %>
 </p>
 
 <%= link_to t('edit'), edit_shift_path(@shift) %> |

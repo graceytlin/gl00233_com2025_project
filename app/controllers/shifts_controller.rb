@@ -2,6 +2,12 @@ class ShiftsController < ApplicationController
   before_action :set_shift, only: [:show, :edit, :update, :destroy]
   before_action :set_timesheet, only: [:new, :create]
 
+  def index
+    @shifts = Shift.all
+    @shiftsindex = Shift.all.new(shift_index_params)
+    @timesheet = Timesheet.find_by(id: params[:timesheet_id]) || Timesheet.find(shift_params[:timesheet_id])
+  end
+
   # GET /shifts/new
   def new
     @shift = @timesheet.shifts.new
@@ -60,4 +66,5 @@ class ShiftsController < ApplicationController
     def shift_params
       params.require(:shift).permit(:timesheet_id, :date, :start_time, :end_time, :paid, :clock_in, :clock_out)
     end
+
 end

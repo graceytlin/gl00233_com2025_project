@@ -75,9 +75,24 @@ en:
       email_sent: Thank you. We'll get back to you ASAP.
 
   shifts:
+    class: Shifts
+    belongs_to: Timesheet
+    date: Date
+    start_time: 'Shift start:'
+    end_time: 'Shift end:'
+    paid: 'Paid?'
+    clock_in: 'Clocked in at'
+    clock_out: 'Clocked out at'
+    no_clock: No clock-in/out recorded.
+
+
     create: Add a new shift
     success_new: Shift added!
     success_update: Shift updated.
 
   timesheets:
+    class: Timesheet
+    date: Date
+
+
     add_shift: Add a shift

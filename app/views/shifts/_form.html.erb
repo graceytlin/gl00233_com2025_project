@@ -11,9 +11,9 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :timesheet_id %>
-    <%= form.text_field :timesheet_id %>
+  <div class="hidden">
+    <p>Timesheet from <%= @shift.timesheet.date_from %> to <%= @shift.timesheet.date_to %><p>
+    <%= form.hidden_field :timesheet_id, value: @shift.timesheet.id %>
   </div>
 
   <div class="field">
@@ -31,19 +31,16 @@
     <%= form.time_select :end_time %>
   </div>
 
-  <div class="field">
-    <%= form.label :paid %>
-    <%= form.check_box :paid %>
+  <div class="hidden">
+    <%= form.hidden_field :paid, value: nil %>
   </div>
 
-  <div class="field">
-    <%= form.label :clock_in %>
-    <%= form.datetime_select :clock_in %>
+  <div class="hidden">
+    <%= form.hidden_field :clock_in, value: nil %>
   </div>
 
-  <div class="field">
-    <%= form.label :clock_out %>
-    <%= form.datetime_select :clock_out %>
+  <div class="hidden">
+    <%= form.hidden_field :clock_out, value: nil %>
   </div>
 
   <div class="actions">
