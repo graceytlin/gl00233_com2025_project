@@ -11,3 +11,9 @@ exampletimesheet.delete if exampletimesheet
 
 
 timesheets = Timesheet.create([date_from: '2019-01-01', date_to: '2019-02-01'])
+
+exampleshift = Shift.where(start_time: '00:00:00').first
+exampleshift.delete if exampleshift
+
+
+shifts = Shift.create([start_time: '00:00:00', end_time: '24:00:00', date: '1901-01-01'])

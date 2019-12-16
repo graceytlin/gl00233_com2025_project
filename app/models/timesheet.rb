@@ -1,4 +1,7 @@
 class Timesheet < ApplicationRecord
+
+    has_many :shifts, dependent: :destroy
+
     validates :date_from, :date_to, presence: true
 
     validates :date_from, uniqueness: { scope: [:date_to] }

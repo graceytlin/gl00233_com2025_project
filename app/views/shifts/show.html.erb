@@ -1,0 +1,37 @@
+<p>
+  <strong>Timesheet:</strong>
+  <%= @shift.timesheet %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @shift.date %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @shift.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @shift.end_time %>
+</p>
+
+<p>
+  <strong>Paid:</strong>
+  <%= @shift.paid %>
+</p>
+
+<p>
+  <strong>Clock in:</strong>
+  <%= @shift.clock_in %>
+</p>
+
+<p>
+  <strong>Clock out:</strong>
+  <%= @shift.clock_out %>
+</p>
+
+<%= link_to t('edit'), edit_shift_path(@shift) %> |
+<%= link_to t('back'), shifts_path %>

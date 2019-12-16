@@ -41,6 +41,12 @@ en:
   login: Log-in
   sign_up: Register
 
+  show: Show
+  edit: Edit
+  destroy: Destroy
+  confirm: Are you sure?
+  back: Go back
+
   home:
     home:
       title: A Day's Work
@@ -67,3 +73,11 @@ en:
     request_contact:
       no_email: Please enter an e-mail, otherwise, how will we reply?
       email_sent: Thank you. We'll get back to you ASAP.
+
+  shifts:
+    create: Add a new shift
+    success_new: Shift added!
+    success_update: Shift updated.
+
+  timesheets:
+    add_shift: Add a shift

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :shifts
   resources :timesheets
+
   devise_for :employees
 
   
@@ -8,5 +10,7 @@ Rails.application.routes.draw do
 
   get 'contact', to: 'home#contact'
   post 'request_contact', to: 'home#request_contact'
+
+  get '/timesheets/:id', to: 'timesheets#show.html.erb'
 
 end

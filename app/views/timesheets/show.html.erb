@@ -10,5 +10,9 @@
   <%= @timesheet.date_to %>
 </p>
 
-<%= link_to 'Edit', edit_timesheet_path(@timesheet) %> |
-<%= link_to 'Back', timesheets_path %>
+<p>
+  <%= link_to t('.add_shift'), new_shift_path(timesheet_id: @timesheet) %>
+</p>
+
+<%= link_to t('edit'), edit_timesheet_path(@timesheet) %> |
+<%= link_to t('back'), timesheets_path %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_16_104013) do
+ActiveRecord::Schema.define(version: 2019_12_16_112334) do
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -31,6 +31,20 @@ ActiveRecord::Schema.define(version: 2019_12_16_104013) do
     t.index ["reset_password_token"], name: "index_employees_on_reset_password_token", unique: true
   end
 
+  create_table "shifts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "timesheet_id", null: false
+    t.date "date", null: false
+    t.time "start_time", null: false
+    t.time "end_time", null: false
+    t.boolean "paid", default: false, null: false
+    t.timestamp "clock_in"
+    t.timestamp "clock_out"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["date", "start_time", "end_time"], name: "index_shifts_on_date_and_start_time_and_end_time", unique: true
+    t.index ["timesheet_id"], name: "index_shifts_on_timesheet_id"
+  end
+
   create_table "timesheets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.date "date_from", null: false
     t.date "date_to", null: false
@@ -38,4 +52,5 @@ ActiveRecord::Schema.define(version: 2019_12_16_104013) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "shifts", "timesheets"
 end
