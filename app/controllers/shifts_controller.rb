@@ -2,6 +2,8 @@ class ShiftsController < ApplicationController
   before_action :set_shift, only: [:show, :edit, :update, :destroy]
   before_action :set_timesheet, only: [:new, :create]
 
+  before_action :authenticate_employee!
+
   def index
     @shifts = Shift.all
     @shiftsindex = Shift.all.new(shift_index_params)
