@@ -1,5 +1,6 @@
 class Timesheet < ApplicationRecord
 
+    belongs_to :employee
     has_many :shifts, dependent: :destroy
 
     validates :date_from, :date_to, presence: true
@@ -17,4 +18,6 @@ class Timesheet < ApplicationRecord
             errors.add(:date_to, "must be after the start of the timesheet.")
         end
     end
+
+    scope :employee_timesheets, -> (employee) { where(['employee_id = ?', employee_id])}
 end

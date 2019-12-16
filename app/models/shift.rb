@@ -17,4 +17,6 @@ class Shift < ApplicationRecord
           errors.add(:end_time, "must be after the start of the shift.")
       end
   end
+
+  scope :employee_timesheets, -> (employee) { where(['employee_id = ?', employee_id])}
 end

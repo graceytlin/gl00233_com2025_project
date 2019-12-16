@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_16_112334) do
+ActiveRecord::Schema.define(version: 2019_12_16_142312) do
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -50,7 +50,10 @@ ActiveRecord::Schema.define(version: 2019_12_16_112334) do
     t.date "date_to", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "employee_id", null: false
+    t.index ["employee_id"], name: "index_timesheets_on_employee_id"
   end
 
   add_foreign_key "shifts", "timesheets"
+  add_foreign_key "timesheets", "employees"
 end

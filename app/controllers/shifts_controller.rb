@@ -5,8 +5,7 @@ class ShiftsController < ApplicationController
   before_action :authenticate_employee!
 
   def index
-    @shifts = Shift.all
-    @shiftsindex = Shift.all.new(shift_index_params)
+    @shifts = Shift.employee_shifts(current_employee)
     @timesheet = Timesheet.find_by(id: params[:timesheet_id]) || Timesheet.find(shift_params[:timesheet_id])
   end
 
