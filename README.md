@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a web application created for module COM2025 Web Development.
 
-Things you may want to cover:
+This is a website that allows employees to track their timesheets and shifts.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Created using Ruby on Rails with Ruby 2.5.1 and mySQL.
